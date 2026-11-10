@@ -1,0 +1,6 @@
+bluetooth.service
+docker.service
+greetd.service
+NetworkManager-dispatcher.service
+NetworkManager-wait-online.service
+NetworkManager.service

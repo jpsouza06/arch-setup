@@ -1,0 +1,16 @@
+*.bak
+*.swp
+*~
+.DS_Store
+.env
+.env.*
+!.env.example
+secrets/
+private/
+id_*
+*.key
+*.pem
+*.p12
+*.pfx
+credentials*
+token*

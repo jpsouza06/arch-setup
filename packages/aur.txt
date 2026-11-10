@@ -1,0 +1,3 @@
+google-chrome
+matugen-bin
+waypaper

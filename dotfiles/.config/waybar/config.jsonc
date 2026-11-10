@@ -1,0 +1,90 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 8,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "battery",
+        "tray",
+        "custom/power"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
+    },
+
+    "clock": {
+        "format": "  {:%H:%M}",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    },
+
+    "network": {
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "format-disabled": "󰖪",
+        "tooltip-format": "{essid}",
+        "tooltip-format-disabled": "Wi-Fi desativado — clique para ativar",
+        "on-click": "$HOME/.config/rofi/wifi-menu.sh"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Desligar ou reiniciar",
+        "on-click": "$HOME/.config/rofi/powermenu.sh"
+    }
+}

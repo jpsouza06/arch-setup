@@ -1,0 +1,58 @@
+@import "colors.rasi"
+
+configuration {
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+}
+
+* {
+    font: "JetBrainsMono Nerd Font 13";
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+window {
+    width: 360px;
+    border: 2px;
+    border-color: @primary;
+    border-radius: 12px;
+    background-color: @background;
+}
+
+mainbox {
+    padding: 10px;
+    background-color: @background;
+}
+
+inputbar,
+message {
+    enabled: false;
+}
+
+listview {
+    lines: 3;
+    columns: 1;
+    spacing: 6px;
+    fixed-height: true;
+    scrollbar: false;
+    background-color: transparent;
+}
+
+element {
+    padding: 11px 16px;
+    border-radius: 8px;
+    background-color: @surface;
+}
+
+element selected {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color: inherit;
+}

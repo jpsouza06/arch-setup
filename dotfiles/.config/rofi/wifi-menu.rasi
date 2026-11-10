@@ -1,0 +1,82 @@
+@import "colors.rasi"
+
+configuration {
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+}
+
+* {
+    font: "JetBrainsMono Nerd Font 13";
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+window {
+    width: 460px;
+    border: 2px;
+    border-color: @primary;
+    border-radius: 12px;
+    background-color: @background;
+}
+
+mainbox {
+    padding: 10px;
+    spacing: 8px;
+    background-color: @background;
+}
+
+inputbar {
+    children: [ entry ];
+    padding: 9px 12px;
+    border-radius: 8px;
+    background-color: @surface;
+}
+
+prompt {
+    margin: 0 8px 0 0;
+    background-color: inherit;
+    text-color: @primary;
+}
+
+entry {
+    placeholder: "Pesquisar redes...";
+    placeholder-color: @primary;
+    background-color: inherit;
+    text-color: @foreground;
+}
+
+case-indicator,
+message {
+    enabled: false;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    spacing: 5px;
+    border: 0px;
+    fixed-height: true;
+    scrollbar: false;
+    background-color: transparent;
+}
+
+element,
+element normal.normal,
+element alternate.normal {
+    padding: 9px 12px;
+    border-radius: 7px;
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+element-text {
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color: inherit;
+}

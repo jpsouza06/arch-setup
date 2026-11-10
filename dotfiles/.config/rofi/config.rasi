@@ -1,0 +1,88 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
+@import "colors.rasi"
+
+* {
+    font: "JetBrainsMono Nerd Font 13";
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+window {
+    width: 560px;
+    border: 2px;
+    border-color: @primary;
+    border-radius: 12px;
+    background-color: @background;
+}
+
+mainbox {
+    padding: 12px;
+    spacing: 10px;
+    background-color: @background;
+}
+
+inputbar {
+    children: [ entry ];
+    padding: 10px 14px;
+    border-radius: 8px;
+    background-color: @surface;
+}
+
+entry {
+    placeholder: "Pesquisar aplicativos...";
+    placeholder-color: @primary;
+    background-color: inherit;
+    text-color: @foreground;
+}
+
+prompt,
+case-indicator,
+mode-switcher,
+message {
+    enabled: false;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    spacing: 5px;
+    border: 0px;
+    fixed-height: true;
+    scrollbar: false;
+    background-color: transparent;
+}
+
+element {
+    padding: 8px 12px;
+    border-radius: 7px;
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+element-icon {
+    size: 24px;
+    margin: 0 10px 0 0;
+    background-color: inherit;
+}
+
+element-text {
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color: inherit;
+}

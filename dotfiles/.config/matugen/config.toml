@@ -1,0 +1,27 @@
+[config.wallpaper]
+set = false
+command = ""
+
+[templates.waybar]
+input_path = "~/.config/matugen/templates/waybar-colors.css"
+output_path = "~/.config/waybar/colors.css"
+post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.rofi]
+input_path = "~/.config/matugen/templates/rofi-colors.rasi"
+output_path = "~/.config/rofi/colors.rasi"
+
+[templates.kitty]
+input_path = "~/.config/matugen/templates/kitty-colors.conf"
+output_path = "~/.config/kitty/matugen-colors.conf"
+post_hook = "pkill -SIGUSR1 kitty || true"
+
+[templates.hyprland]
+input_path = "~/.config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/hypr/colors.conf"
+post_hook = "hyprctl reload"
+
+[templates.emacs]
+input_path = "~/.config/matugen/templates/emacs-theme.el"
+output_path = "~/.config/emacs/matugen-theme.el"
+post_hook = "emacsclient --eval '(progn (when (custom-theme-enabled-p (quote matugen)) (disable-theme (quote matugen))) (load-file (expand-file-name \"matugen-theme.el\" user-emacs-directory)) (load-theme (quote matugen) t))' >/dev/null 2>&1 || true"

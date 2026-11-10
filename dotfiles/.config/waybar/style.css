@@ -1,0 +1,58 @@
+@import "colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: alpha(@background, 0.92);
+    color: @foreground;
+    border-bottom: 1px solid alpha(@foreground, 0.08);
+}
+
+#workspaces {
+    margin-left: 8px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: alpha(@foreground, 0.50);
+    background: transparent;
+    border: none;
+}
+
+#workspaces button.active {
+    color: @primary;
+}
+
+#clock,
+#network,
+#pulseaudio,
+#battery,
+#tray,
+#custom-power {
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    background: alpha(@foreground, 0.06);
+}
+
+#custom-power {
+    color: @error;
+    padding: 0 12px;
+    margin-right: 6px;
+}
+
+#custom-power:hover {
+    background: alpha(@error, 0.18);
+}
+
+#battery.warning {
+    color: @secondary;
+}
+
+#battery.critical {
+    color: @error;
+}
